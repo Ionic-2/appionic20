@@ -1,0 +1,27 @@
+<!--
+  Generated template for the Index page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Listado de Productos </ion-title>
+  </ion-navbar>
+</ion-header>
+
+ <ion-list *ngFor="let producto of productos">
+    <ion-item-sliding>
+      <ion-item>
+       <h1>{{producto.name}}</h1>
+       <p>{{producto.price}}</p>
+      </ion-item>
+      <ion-item-options side="left">
+          <button ion-button color ="primary"  (click)="EditarProducto(producto)" >
+            Editar
+          </button>
+      </ion-item-options>
+    </ion-item-sliding>
+ </ion-list>
+
+
